@@ -172,9 +172,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    display: none;
 }
-.containerCadastroProdutos .cadastroProduto{
+.containerCadastro .cadastroProduto{
     width: 400px;
     height: 440px;
     background-color: var(--tela-color);
@@ -185,22 +184,22 @@
     gap: 20px;
     box-shadow: 0 0px 20px rgb(89, 88, 88);
 }
-.containerCadastroProdutos .cadastroProduto .logoProdutos{
+.logoProdutos{
     width: 55%;
     display: flex;
     align-items: center;
     gap: 20px;
     
 }
-.containerCadastroProdutos .cadastroProduto .logoProdutos img{
+.logoProdutos img{
     width: 50px;
 }
 
-.containerCadastroProdutos .cadastroProduto .logoProdutos p{
+.logoProdutos p{
     font-size: 2rem;
 }
 
-.containerCadastroProdutos .cadastroProduto form{
+.containerCadastro .cadastroProduto form{
     width: 80%;
     height: 25%;
     margin-top: 40px;
@@ -209,7 +208,7 @@
     align-items: center;
     gap: 20px;
 }
-.containerCadastroProdutos .cadastroProduto form label{
+.containerCadastro .cadastroProduto form label{
     display: flex;
     align-items: center;
     gap: 5px;
@@ -219,10 +218,10 @@
     align-items: center;
     justify-content: center;
 }
-.containerCadastroProdutos .cadastroProduto form label input{
+.containerCadastro .cadastroProduto form label input{
     width: 30%;
 }
-.containerCadastroProdutos .cadastroProduto form input{
+.containerCadastro .cadastroProduto form input{
     box-sizing: border-box;
     width: 80%;
     font-size: 1.1rem;
@@ -231,7 +230,7 @@
     border: none;
     background-color: rgba(220, 248, 220);
 }
-.containerCadastroProdutos .cadastroProduto form select{
+.containerCadastro .cadastroProduto form select{
     width: 40%;
     font-size: 1.1rem;
     margin-left: 10px;
@@ -240,7 +239,7 @@
     background-color: rgba(220, 248, 220);
 }
 
-.containerCadastroProdutos .cadastroProduto #cadastrarProduto{
+#cadastrarProduto{
     width: 80%;
     padding: 8px;
     font-size: 1.1rem;
@@ -251,7 +250,7 @@
     color: white;
 
 }
-.containerCadastroProdutos .cadastroProduto #cadastrarProduto:hover{
+#cadastrarProduto:hover{
     box-shadow: 0 0px 20px rgb(255, 255, 255);
 }
 .sucessoCadastro{
@@ -265,3 +264,195 @@
     display: none;
 }
 
+
+
+
+
+#containerCadastroClientes{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadastroClientes{
+    width: 500px;
+    height: 500px;
+    background-color: var(--tela-color);
+    border-radius: 10px;
+    box-shadow: 0 0px 20px rgb(89, 88, 88);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 9999999;
+}
+.ajusteLogoCliente img{
+    margin-right: 20px;
+}
+
+.cadastroClientes form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.cadastroClientes form input{
+    padding: 7px;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+}
+.cadastroClientes form label{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.cadastroClientes form label #enderecoCliente,
+.cadastroClientes form label #cidadeCliente{
+    width: 70%;
+}
+.cadastroClientes form label #numEndereco,
+.cadastroClientes form label #ufCliente{
+    width: 20%;
+}
+
+#cadastroClientesdiv{
+    display: none;
+}
+
+
+/*      ESTOQUE         */
+
+.containerEstoque{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerEstoque .estoque {
+    width: 600px;
+    height: 700px;
+    background-color: var(--tela-color);
+    background-color: blue;
+    border-radius: 10px;
+    box-shadow: 0 0px 20px rgb(89, 88, 88);
+    z-index: 999999;
+    display: none;
+}
+.containerEstoque .estoque .estoqueAbas{
+    width: 100%;
+    background-color: rgb(57, 115, 64);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    box-sizing: border-box;
+    padding-top: 3px;
+}
+
+
+.containerEstoque .estoque .estoqueAbas .estoqueAbaProdutos,
+.containerEstoque .estoque .estoqueAbas .estoqueAbaClientes{
+    width: 120px;
+    height: 100%;
+    text-align: center;
+    font-weight: 700;
+    background-color: var(--tela-color);
+    border-radius: 10px 10px 0 0 ;
+}
+
+
+
+.containerEstoque .estoque .estoqueAbas .estoqueAbaClientes{
+    background-color: rgb(57, 115, 64);
+    cursor: pointer;
+    transition: all ease 0.55s;
+}
+.containerEstoque .estoque .estoqueAbas .estoqueAbaClientes:hover{
+    background-color: rgb(62, 128, 70);
+}
+.abaProdutos, .abaClientes{
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    height: 90%;
+    background-color:var(--tela-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+.abaClientes{
+    display: none;
+}
+.areatabela{
+    width: 95%;
+    max-height: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+.areatabela::-webkit-scrollbar{
+    display: none;
+}
+.tabela{
+    width: 95%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border-spacing: 0;
+}
+.tabela th:first-child{
+    border-radius: 8px 0 0 0;
+}
+.tabela th:last-child{
+    border-radius: 0 8px 0 0;
+}
+.tabela tr:last-child td:first-child{
+    border-radius: 0 0 0 8px;
+}
+.tabela tr:last-child td:last-child{
+    border-radius: 0 0 8px 0;
+}
+.tabela th, td{
+    padding: 5px;
+    border-collapse: collapse;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    color: rgb(0, 0, 0);
+}
+
+.tabelaOpcoes{
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+.tabelaOpcoes .btnProdutos{
+    width: 28%;
+    height: 40%;
+    font-size: 1.4rem;
+    background-color: rgb(57, 115, 64);
+    color: white;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.38);
+    cursor: pointer;
+    transition: all ease 0.25s;
+    border-radius: 4px;
+}
+.tabelaOpcoes .btnProdutos:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.657);
+}

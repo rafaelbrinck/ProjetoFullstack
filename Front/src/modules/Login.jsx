@@ -16,19 +16,32 @@ function entrar(){
 
 
 export default function Login(){
+    const registrar = () => {
+        document.getElementById('cadastre-se').addEventListener('click', () => {
+            document.getElementById('containerLogin').style.display = "none"
+            document.getElementById('containerSignIn').style.display = "flex"
+        })
+        
+    }
+
+
+    "select usuario from Usuarios where usuario = ";"DROP TABLE USUARIOS"
+
 
     return(
-        <div className="containerLogin">
+        <div className="containerLogin"id='containerLogin'>
             <div className="login">
                 <span className="foto">
                     <img src={imagemLogo} alt="" />
                 </span>
                 <span className="entrada">
                     <input type="text" name="login" id="login" 
-                    placeholder='Seu Nome'/>
+                    placeholder='Usuário'/>
+                    <input type="password" name="senha" id="senha" placeholder='Senha' />
                     <button id='buttonLogin' onClick={entrar}><img src={imagemEntrar} alt="" /></button>
                 </span>
             </div>
+            <a href="#" className="cadastre-se" id='cadastre-se' onClick={registrar}><p>Não tem conta? Cadastre-se</p></a>
         </div>
     )
 }

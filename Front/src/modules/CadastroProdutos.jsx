@@ -1,5 +1,6 @@
 import imgProdutos from "../assets/produtos.png"
-import { sair } from "./Cadastro"
+import { sair } from "../functions/functions"
+
 
 
 
@@ -13,7 +14,7 @@ export default function CadastroProdutos(){
     // }
 
     return(
-        <div className="containerCadastroProdutos" id="containerCadastroProdutos">
+        <div className="containerCadastro sairTelas" id="containerCadastroProdutos">
             <div className="cadastroProduto" id="cadastrosDosProduto">
                 <div className="base">
                     <button className="opSair" id="opSairProduto" onClick={sair}></button>

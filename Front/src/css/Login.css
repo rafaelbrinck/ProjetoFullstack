@@ -2,36 +2,55 @@
     
     box-sizing: border-box;
 }
-.containerLogin{
+/*
+body{
+    cursor: url('../assets/cursor/cursor.cur'), auto;
+}*/
+.containerLogin,
+.containerSignIn{
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
 }
-.containerLogin .login{
+#containerSignIn {
+    display: none;
+}
+.containerLogin .login,
+.containerSignIn .SignIn{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 30px;
 }
-.containerLogin .login .foto{
+.containerLogin .login .foto,
+.containerSignIn .SignIn .foto{
     background-color: rgb(143, 143, 143, 0.6);
     padding: 30px;
     border-radius: 100%;
     display: flex;
 }
-.containerLogin .login .foto img{
+.containerLogin .login .foto img,
+.containerSignIn .SignIn .foto img{
     width: 150px;
 }
 
-.containerLogin .login .entrada{
+
+.containerLogin .login .entrada,
+.containerSignIn .SignIn .registro{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 8px;
 }
-.containerLogin .login .entrada input{
+.containerLogin .login .entrada input,
+.containerSignIn .SignIn input{
     padding: 10px;
     border-radius: 30px;
     border: none;
@@ -41,7 +60,7 @@
 }
 
 
-.containerLogin .login .entrada button{
+#buttonLogin, #buttonRegistro{
     margin-left: 10px;
     padding: 2px;
     background-color: rgba(255, 255, 255, 0.054);
@@ -52,12 +71,38 @@
 
 }
 
-.containerLogin .login .entrada button:hover img{
+#buttonLogin:hover img,
+#buttonRegistro:hover img{
     width: 35px;
 }
 
-.containerLogin .login .entrada button img{
+#buttonLogin img,
+#buttonRegistro img{
     width: 30px;
     transition: 0.55s ease all;
 }
+.cadastre-se{
+    position: absolute;
+    bottom:0;
+    color: rgb(31, 30, 30);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.5s ease all;
+}
+.cadastre-se:hover{
+    color: white;
+    font-size: 0.95rem;
+}
 
+
+
+.containerSignIn{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+}
