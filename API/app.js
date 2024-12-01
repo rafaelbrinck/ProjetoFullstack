@@ -6,6 +6,7 @@ const ProdutoRouter = require("./Router/ProdutoRouter");
 const userRouter = require("./Router/UsuarioRouter");
 const categoriaRouter = require("./Router/CategoriaRouter");
 const clienteRouter = require("./Router/ClienteRouter");
+const vendasRouter = require("./Router/VendasRouter");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -23,6 +24,7 @@ app.use("/api/produtos", ProdutoRouter);
 app.use("/api/usuarios", userRouter);
 app.use("/api/categorias", categoriaRouter);
 app.use("/api/clientes", clienteRouter);
+app.use("/api/vendas", vendasRouter);
 
 app.listen(PORT, () => {
   console.log(`Servidor executando na porta http://localhost:${PORT}`);

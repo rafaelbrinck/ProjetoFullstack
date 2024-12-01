@@ -1,0 +1,15 @@
+.hora{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-right: 10px;
+    height: 100%;
+    color: black;
+}

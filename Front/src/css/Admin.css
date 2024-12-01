@@ -366,6 +366,7 @@
     font-weight: 700;
     background-color: var(--tela-color);
     border-radius: 10px 10px 0 0 ;
+    cursor: pointer;
 }
 
 

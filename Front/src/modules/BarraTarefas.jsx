@@ -1,5 +1,5 @@
 import imagemSair from "../assets/saida.png"
-import Relogio from "./Relogio"
+import Hora from "./Hora"
 
 function sair(){
     const buttonSaida = document.getElementById('buttonSair')
@@ -17,9 +17,7 @@ export default function BarraTarefas(){
             <span className="sair" id="buttonSair" onClick={sair}>
                 <img src={imagemSair} alt="" />
             </span>
-            {/* <span className="hora">
-                <Relogio />
-            </span> */}
+            <Hora/>
         </div>
     )
 }
