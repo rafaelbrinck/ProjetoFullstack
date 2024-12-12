@@ -9,12 +9,14 @@ export default function Icones(){
 
         document.getElementById('cadastro').addEventListener('click', () => {
             containerCadastro.style.display = "flex"
+            document.getElementById('containerEstoque').style.display = 'none'
         })
     }
     const abrirListas = () => {
         document.getElementById('estoque').addEventListener('click', () => {
             document.getElementById('paginaEstoque').style.display = "block"
             document.getElementById('containerEstoque').style.display = "flex"
+            document.getElementById('containerCadastro').style.display = 'none'
         })
     }
 

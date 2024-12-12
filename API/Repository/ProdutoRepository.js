@@ -10,8 +10,9 @@ async function listar() {
 }
 
 async function inserir(produto) {
-  produto.id = idGerador();
-  // Banco
+  if (produto.custo == NaN || produto.custo == undefined) {
+    produto.custo = 0;
+  }
   const client = getConexao();
   await client.connect();
   const result = await client.query(

@@ -1,7 +1,11 @@
 const clienteRepository = require("../Repository/ClienteRepository");
 
 async function listar() {
-  return await clienteRepository.listar();
+  try {
+    return await clienteRepository.listar();
+  } catch {
+    throw { id: 404, msg: "Problema no service" };
+  }
 }
 
 async function buscarId(id) {

@@ -64,3 +64,5 @@ export function mostrarData() {
     };
   }
 }
+
+export function atualizaListaClientes() {}

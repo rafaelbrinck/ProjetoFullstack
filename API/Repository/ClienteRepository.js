@@ -1,8 +1,7 @@
 const { getConexao } = require("../config/database");
-let idGerador = () => Math.floor(Math.random() * 900);
-const cliente = getConexao();
 
 async function listar() {
+  const cliente = getConexao();
   await cliente.connect();
   const result = await cliente.query("SELECT * FROM CLIENTES");
   await cliente.end();
@@ -10,6 +9,7 @@ async function listar() {
 }
 
 async function deletar(id) {
+  const cliente = getConexao();
   await cliente.connect();
   const result = await cliente.query(
     "DELETE FROM CLIENTES WHERE id = $1 RETURNING *",
@@ -20,6 +20,7 @@ async function deletar(id) {
 }
 
 async function buscarId(id) {
+  const cliente = getConexao();
   await cliente.connect();
   const result = await cliente.query("SELECT * FROM CLIENTES WHERE id = $1", [
     id,
@@ -29,18 +30,18 @@ async function buscarId(id) {
 }
 
 async function inserir(client) {
-  client.id = idGerador();
+  const cliente = getConexao();
   await cliente.connect();
   const result = await cliente.query(
-    "INSERT INTO CLIENTES (id, conta, nome, cep, endereco, cidade, uf) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *",
+    "INSERT INTO CLIENTES (conta, nome, cep, endereco, cidade, uf, contato) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *",
     [
-      client.id,
       client.conta,
       client.nome,
       client.cep,
       client.endereco,
       client.cidade,
       client.uf,
+      client.contato,
     ]
   );
   await cliente.end();
